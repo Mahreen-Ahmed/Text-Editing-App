@@ -1,5 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import About from './About';
+import Home from './Home';
+import Contact from './Contact';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom' 
+
 
 export default function Navbar(props) {
   return (
@@ -11,14 +16,22 @@ export default function Navbar(props) {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/">Home</a>
+      <li className="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/">{props.abouttxt}</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
         </li>
-        
-        
+   
+        {/* <Route path='' component={Home}/>
+        <Route path='/' component={}/>
+        <Route path='/Contact' component={Contact} /> */}
+    
+        {/* <link to=""></link>
+        <link to="/"></link>
+        <link to="/Contact"></link> */}
+       
+
       </ul>
       {/* <form className="d-flex">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -35,5 +48,5 @@ Navbar.propTypes = {
 }
 Navbar.defaultProps = {
     title : "Blogger",
-    abouttxt: "About Us"
+    abouttxt: " Us"
 }
